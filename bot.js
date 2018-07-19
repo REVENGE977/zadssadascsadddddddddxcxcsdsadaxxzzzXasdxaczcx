@@ -3783,7 +3783,7 @@ fs.writeFile("./point.jsmn",JSON.stringify(points), function(err){
 
 
 
- const google_api_key = 'AIzaSyAdORXg7UZUo7sePv97JyoDqtQVi3Ll0b8'
+ const GOOGLE_API_KEY = 'AIzaSyAdORXg7UZUo7sePv97JyoDqtQVi3Ll0b8'
 const YouTube = require('simple-youtube-api');
 const youtube = new YouTube(GOOGLE_API_KEY);
 
