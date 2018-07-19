@@ -4179,7 +4179,7 @@ client.on("guildMemberRemove", function(member) {
         .setTimestamp()
         return wc.sendEmbed(embed);
 });
-if(banlist.has(msg.author.id)) return;
+
 //المصدر:GCodes
 
 
