@@ -2176,11 +2176,10 @@ return message.reply("**:white_check_mark: .. تم فك الميوت عن الش
 
 });
 
-
   const banlist = new Set();
 client.on('message',async message => {
+    if (!devs.includes(message.author.id)) return;
   if(message.content.startsWith(prefix + "banlist add")) {
-    if(message.author.id !== '429972030092476437') return;
     let mention = message.mentions.users.first();
     if(!mention) return message.reply('منشن شخص').then(msg => {
       msg.delete(2800);
@@ -2190,8 +2189,8 @@ client.on('message',async message => {
     banlist.add(mention.id);
     message.channel.send(`:white_check_mark: Done!. Added: ${mention}`);
   } else {
+    if (!devs.includes(message.author.id)) return;
     if(message.content.startsWith(prefix + "banlist remove")) {
-    if(message.author.id !== '429972030092476437') return;
     let mention = message.mentions.users.first();
     if(!mention) return message.reply('منشن شخص').then(msg => {
       msg.delete(2800);
@@ -2204,7 +2203,6 @@ client.on('message',async message => {
   }
   }
 });
-
 
 
 
