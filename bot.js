@@ -3661,7 +3661,7 @@ fs.writeFile("./point.jsmn",JSON.stringify(points), function(err){
 
 
 
-const prefix = '$';
+
 client.on('ready', function() {
     console.log(`i am ready ${client.user.username}`);
 });
