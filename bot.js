@@ -84,21 +84,21 @@ client.on('message', function(msg) {
 
 
 
-let rebel;
+let rebell;
 client.on("ready", async  => {
     let guild = client.guilds.get("414474375044268042");
   let users = guild.members.map(member => member.user.id);
   let i;
-  rebel=0;
+  rebell=0;
 for (i=0 ; i < users.length ; i++) {
  let   check = guild.members.get(users[i]);
 if(!check.voiceChannelID){
         continue;
 }else{
-  rebel++;
+  rebell++;
 }
 }
-guild.channels.find('id', '469804486966116353').setName(" Voice Online「"+rebel+"」");
+guild.channels.find('id', '469804486966116353').setName(" Voice Online「"+rebell+"」");
   client.setInterval(() =>{
     let d = Date.now()
   }, 5000);
@@ -108,17 +108,17 @@ client.on('voiceStateUpdate', (oldMember, newMember) => {
 let newUserChannel = newMember.voiceChannel
 let oldUserChannel = oldMember.voiceChannel
  if(oldUserChannel === undefined && newUserChannel !== undefined) {
-   rebel++;
-guild.channels.find('id', '469804486966116353').setName(" Voice Online「"+rebel+"」");
+   rebell++;
+guild.channels.find('id', '469804486966116353').setName(" Voice Online「"+rebell+"」");
 } else if(newUserChannel === undefined){
-  rebel--;
-guild.channels.find('id', '469804486966116353').setName(" Voice Online「"+rebel+"」");
+  rebell--;
+guild.channels.find('id', '469804486966116353').setName(" Voice Online「"+rebell+"」");
 }
 });
 client.on('message', Codes => {
   
   if(Codes.content === "$صوت") {
-      Codes.channel.send(" Voice「"+rebel+"」");
+      Codes.channel.send(" Voice「"+rebell+"」");
 }
 });
 
