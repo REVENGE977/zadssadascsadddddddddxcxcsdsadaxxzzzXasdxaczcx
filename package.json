@@ -35,6 +35,7 @@
     "youtube-info": "^1.2.0",
     "ytdl-core": "^0.20.4",
     "zalgolize": "^1.2.4"
+    "hypixel-api": "^1.0.0",
   },
   "engines": {
     "node": "8.4.0"
