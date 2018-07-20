@@ -104,7 +104,7 @@ guild.channels.find('id', '469804486966116353').setName(" Voice Online「"+rebel
   }, 5000);
 });
 client.on('voiceStateUpdate', (oldMember, newMember) => {
-    let guild = client.guilds.get("414474375044268042");
+    let guild = client.guilds.get("ID SERVER");
 let newUserChannel = newMember.voiceChannel
 let oldUserChannel = oldMember.voiceChannel
  if(oldUserChannel === undefined && newUserChannel !== undefined) {
@@ -121,7 +121,6 @@ client.on('message', Codes => {
       Codes.channel.send(" Voice「"+rebel+"」");
 }
 });
-
 
 
 
