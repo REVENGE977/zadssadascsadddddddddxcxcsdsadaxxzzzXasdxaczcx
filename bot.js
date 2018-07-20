@@ -37,7 +37,7 @@ client.on('message', message => {
 
     if(!message.mentions.members.first()) return message.reply('لازم تطلب ايد وحدة').catch(console.error);
     if(message.mentions.users.size > 1) return message.reply('ولد ما يضبط لازم بنت تذكر لازم بنت الحلال').catch(console.error);
-      if(proposed === client.user) return message.reply(`** تبي تتزوجني؟ **`);
+      if(proposed === client.user) return message.reply(`** تبي تتزوجني؟ **`)
             message.channel.send(`**${proposed} 
 بدك تقبلي عرض الزواج من ${message.author}
 العرض لمدة 10 ثانية 
