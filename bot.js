@@ -3660,7 +3660,7 @@ fs.writeFile("./point.jsmn",JSON.stringify(points), function(err){
 
 
 
-const yt_api_key = "AIzaSyDeoIH0u1e72AtfpwSKKOSy3IPp2UHzqi4";
+
 const prefix = '$';
 client.on('ready', function() {
     console.log(`i am ready ${client.user.username}`);
