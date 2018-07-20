@@ -84,44 +84,6 @@ client.on('message', function(msg) {
 
 
 
-let rebell;
-client.on("ready", async  => {
-    let guild = client.guilds.get("414474375044268042");
-  let users = guild.members.map(member => member.user.id);
-  let i;
-  rebell=0;
-for (i=0 ; i < users.length ; i++) {
- let   check = guild.members.get(users[i]);
-if(!check.voiceChannelID){
-        continue;
-}else{
-  rebell++;
-}
-}
-guild.channels.find('id', '469804486966116353').setName(" Voice Online「"+rebell+"」");
-  client.setInterval(() =>{
-    let d = Date.now()
-  }, 5000);
-});
-client.on('voiceStateUpdate', (oldMember, newMember) => {
-    let guild = client.guilds.get("ID SERVER");
-let newUserChannel = newMember.voiceChannel
-let oldUserChannel = oldMember.voiceChannel
- if(oldUserChannel === undefined && newUserChannel !== undefined) {
-   rebell++;
-guild.channels.find('id', '469804486966116353').setName(" Voice Online「"+rebell+"」");
-} else if(newUserChannel === undefined){
-  rebell--;
-guild.channels.find('id', '469804486966116353').setName(" Voice Online「"+rebell+"」");
-}
-});
-client.on('message', Codes => {
-  
-  if(Codes.content === "$صوت") {
-      Codes.channel.send(" Voice「"+rebell+"」");
-}
-});
-
 
 
 
@@ -989,12 +951,12 @@ const Za7f = [
 
 
 
-var rebel = ["https://f.top4top.net/p_682it2tg6.png","https://e.top4top.net/p_682a1cus5.png","https://d.top4top.net/p_682pycol4.png","https://c.top4top.net/p_682vqehy3.png","https://b.top4top.net/p_682mlf9d2.png","https://a.top4top.net/p_6827dule1.png","https://b.top4top.net/p_682g1meb10.png","https://a.top4top.net/p_682jgp4v9.png","https://f.top4top.net/p_682d4joq8.png","https://e.top4top.net/p_6828o0e47.png","https://d.top4top.net/p_6824x7sy6.png","https://c.top4top.net/p_682gzo2l5.png","https://b.top4top.net/p_68295qg04.png","https://a.top4top.net/p_682zrz6h3.png","https://f.top4top.net/p_6828vkzc2.png","https://e.top4top.net/p_682i8tb11.png"]
+var rebelx = ["https://f.top4top.net/p_682it2tg6.png","https://e.top4top.net/p_682a1cus5.png","https://d.top4top.net/p_682pycol4.png","https://c.top4top.net/p_682vqehy3.png","https://b.top4top.net/p_682mlf9d2.png","https://a.top4top.net/p_6827dule1.png","https://b.top4top.net/p_682g1meb10.png","https://a.top4top.net/p_682jgp4v9.png","https://f.top4top.net/p_682d4joq8.png","https://e.top4top.net/p_6828o0e47.png","https://d.top4top.net/p_6824x7sy6.png","https://c.top4top.net/p_682gzo2l5.png","https://b.top4top.net/p_68295qg04.png","https://a.top4top.net/p_682zrz6h3.png","https://f.top4top.net/p_6828vkzc2.png","https://e.top4top.net/p_682i8tb11.png"]
     client.on('message', message => {
         var args = message.content.split(" ").slice(1);
     if(message.content.startsWith(prefix + 'لو خيروك')) {
          var cat = new Discord.RichEmbed()
-.setImage(rebel[Math.floor(Math.random() * rebel.length)])
+.setImage(rebelx[Math.floor(Math.random() * rebelx.length)])
 message.channel.sendEmbed(cat);
     }
 });
