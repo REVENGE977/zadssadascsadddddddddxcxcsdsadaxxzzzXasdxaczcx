@@ -4025,7 +4025,7 @@ Send By : __<@${m8tr7}>__`)
             .setColor("RANDOM")
                     .setAuthor(eyad.guild.name, eyad.guild.iconURL)
                     .setDescription(` تم الرد على الابيل <@${eyad.author.id}>`)
-                    .setThumbnail(message.author.avatarURL)
+                    .setThumbnail(eyad.author.avatarURL)
          eyad.channel.sendEmbed(Embed11).then(eyad => {eyad.delete(10000)})
         }
     });
