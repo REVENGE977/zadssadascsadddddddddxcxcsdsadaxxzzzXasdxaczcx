@@ -3956,7 +3956,7 @@ message.channel.awaitMessages(filte, { max: 1, time: 15000, errors: ['time'] })
 
 
 
-
+client.on('message', message => {
     if(message.content.startsWith(prefix +'mcappeal')) {
           const A8tra7Room = message.guild.channels.find("name", "staff-appeals")
 
