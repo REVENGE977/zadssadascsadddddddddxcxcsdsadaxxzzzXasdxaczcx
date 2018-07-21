@@ -4009,7 +4009,7 @@ Send By : __<@${m8tr7}>__`)
         let mas = eyad.author
         if(eyad.content.startsWith(prefix + 'reappeal')) {
             let staff = eyad.guild.member(eyad.author).roles.find('name' , '• MineCubes Sr.Mod' , '• MineCubes Admin' , '• ♛ MineCubes Owner ♛');
-            if(!args) return eyad.channel.send("`Usage: "  'reappeal <@someone> <message>`');
+            if(!args) return eyad.channel.send("`Usage: "  '$reappeal <@someone> <message>`');
             if(!men) return eyad.channel.send("`Usage: "  '$reappeal <@someone> <message>`');
             const embed = new Discord.RichEmbed()
             .setColor("RANDOM")
