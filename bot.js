@@ -567,99 +567,102 @@ msg.delete();
 
 
 
-client.on("message", message => {
-    if (message.content === (prefix + "help")) {
-     const embed = new Discord.RichEmbed()
-         .setColor("#580e6b")
-         .setThumbnail(message.author.avatarURL)
-         .setDescription(`
-╭━╮╭━╮╱╱╱╱╱╭━━╮╱╱╱╭╮
-┃┃╰╯┃┃╱╱╱╱╱┃╭╮┃╱╱╭╯╰╮
-┃╭╮╭╮┣━━┳╮╭┫╰╯╰┳━┻╮╭╯
-┃┃┃┃┃┃╭╮┣╋╋┫╭━╮┃╭╮┃┃
-┃┃┃┃┃┃╭╮┣╋╋┫╰━╯┃╰╯┃╰╮
-╰╯╰╯╰┻╯╰┻╯╰┻━━━┻━━┻━╯
-للاقتراحات اعمل شات اسمه
-:arrow_right: suggestions
-لروم اللوق اعمل شات اسمه
-:arrow_right: log
-
-           General Commands
-
-  『$suggest/ الإقتراحات』
-  『$server/ معلومات عن السيرفر』
-  『$avatar/ يعرض صورتك او صوره شخص』
-  『$mcskin/ لعرض سكن ماين كرافت』
-  『$short/ لتقصير روابط الانترنت』
-  『$ping/لعرض سرعه اتصالك』
-  『$tag/ يزخرف الكلام يلي تكتبه بالانجليزي مو بالعربي』
-  『$quran/ لعرض سور القران الكريم』
-  『$afk/ لاخبار الشعب انك AFK』
-
-           Administrative Commands
-
-   『$lock/ لتقفيل الشات』
-   『$unlock/لفتح الشات』
-   『$clear/ لمسح الشات』
-   『$kick/ اعطاء kick』صيانه !
-   『$tempban/ اعطاء ban』
-   『$unban/ لفك ban』
-   『$tempmute/ اعطاء ميوت مؤقت』
-   『$sltempmute/ امر ميوت مميز  』
-   『$unmute/ لفك الميوت』
-   『$vtempmute/ ميوت في الرومات الصوتيه مؤقت 』
-   『$unvmute/ لفك باند الرومات الصوتيه』
-   『$warn/ اعطاء تحذير  』
-
-           Bot Commands
-
-   『$invite/ اضافه البوت』
-   『$bot/ معلومات عن البوت』
-
-          Music Commands
-
-   『$play/ لتشغيل اغنيه』
-   『$stop/ لايقاف الاغنيه』
-   『$skip/ لعمل سكب للاغنيه』
-   『$queue/ قائمه الانتظار』
-   『$pause/ ايقاف مؤقت』
-
-              BC رسائل جماعيه
-   『$bc1/❖ برودكاست + للكل + مطور 』
-   『$bc3/❖ برودكاست + للكل + مطور』
-   『$bc3/❖  برودكاست + للكل + مطور جدا』
-
-           Games Commands
-
-   『$لعبه صراحه/صراحه』
-   『$اساله انمي/انمي 』
-   『$يخيرك بين شي وشي / لعبه خيروك』
-   『$يعطيك عقاب و لازم تنفذه/ عقاب』
-   『$لعبه اسئله / كت تويت
-   『$hack/ لعبه التهكير تراها طقطقه بس』
-   『$rps/ لعبه حجر ورقه مقص مع البوت』
-
-
--------
-  BOT By: 𝑺𝒉𝒂𝒅𝒐𝒘__𝑿#5426
-رابط البوت
-https://discordapp.com/api/oauth2/authorize?client_id=456134218330800128&permissions=8&scope=bot
-----------
-`)
-   message.author.sendEmbed(embed)
-
-   }
-   });
 client.on('message', message => {
-     if (message.content === (prefix + "help")) {
-     let embed = new Discord.RichEmbed()
-  .setAuthor(message.author.username)
-  .setColor("#8650a7")
-  .addField("Done" , " تــــم ارســالك في الخــاص")
-  message.channel.sendEmbed(embed);
-    }
-});
+if (message.content.startsWith(prefix + 'Help')) { /// This is The DMS Code Send The Help In DMS // Code By NotGucci
+    let pages = [`
+༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻
+:earth_africa: The Public Commands :earth_africa: 
+1༺༻  $id  | Shows User ID (SOON)༺༻
+2༺༻  $userinfo | Shows User Info༺༻
+3༺༻  $server | Shows Server Info༺༻
+4༺༻  $ping | Shows Bot Ping༺༻
+5༺༻  $dt| Show date and time༺༻
+6༺༻   $invite | Shows Bot Invite Link༺༻
+7༺༻   $bot | Shows Bot Info༺༻
+8༺༻   $avatar | Shows User Avatar༺༻
+9༺༻   $image | Shows Server Avatar༺༻
+10༺༻  $mcskin  | Shows Minecraft Players Skin༺༻
+11༺༻  $say  | Repeat What Your Saying༺༻
+12༺༻  $gif  | Gives You Gif ༺༻
+11༺༻  $moveall  | Move All Members To Your Channel༺༻
+12༺༻  $hack  | Hack Game༺༻
+13༺༻  $زواج  | marriage game༺༻
+14༺༻  $rps  | Paper scissors game with the bot༺༻
+15༺༻  $مريم  | Mariam Game༺༻
+16༺༻  $حاسبه |  Calculator༺༻
+17༺༻  $translate |  Translate༺༻
+18༺༻  $انمي |  Anime Game༺༻
+19༺༻  $حكم |  Rule Game༺༻
+20༺༻  $عقاب |  Punishment Game༺༻
+21༺༻  $tag  | Give You Custom Words༺༻
+22༺༻  $short  | short link༺༻
+23༺༻  $micr  | Questions for Minecraft༺༻
+24༺༻  $allbots  | View all bots༺༻
+༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻
+Click On ▶ To Go Administor Side
+   `
+,`
+༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻
+:closed_lock_with_key: Administor Commands:closed_lock_with_key: 
+1༺༻  $clear | Clear The Chat༺༻
+2༺༻  $bc | Msg Everyone In The Server༺༻
+2༺༻  $bc2 | Msg Everyone In The Server [without embed]༺༻
+3༺༻  $kick | Kick With Reson༺༻
+4༺༻  $tempban | Ban With Reason༺༻
+5༺༻  $tempmute | mute With Reason༺༻
+6༺༻  $unmute | unmute ༺༻
+7༺༻ Make Room Called log For Logs༺༻
+8༺༻ Make Room Called report For reports༺༻
+9༺༻ Make Room Called suggestion For suggestion༺༻
+༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻
+Click On ▶ To Go To Bot Info
+   `,`
+༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻
+1༺༻  There is Commands Just For OrochiX | Bot By:OrochiX༺༻
+$say -> send msg with the bot 
+$bcall -> send msg for all servers
+༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻
+   `]
+    let page = 1;
 
+    let embed = new Discord.RichEmbed()
+    .setColor('RANDOM')
+    .setFooter(`Page ${page} of ${pages.length}`)
+    .setDescription(pages[page-1])
+
+    message.author.sendEmbed(embed).then(msg => {
+
+        msg.react('◀').then( r => {
+            msg.react('▶')
+
+
+        const backwardsFilter = (reaction, user) => reaction.emoji.name === '◀' && user.id === message.author.id;
+        const forwardsFilter = (reaction, user) => reaction.emoji.name === '▶' && user.id === message.author.id;
+
+
+        const backwards = msg.createReactionCollector(backwardsFilter, { time: 2000000});
+        const forwards = msg.createReactionCollector(forwardsFilter, { time: 2000000});
+
+
+
+        backwards.on('collect', r => {
+            if (page === 1) return;
+            page--;
+            embed.setDescription(pages[page-1]);
+            embed.setFooter(`Page ${page} of ${pages.length}`);
+            msg.edit(embed)
+        })
+        forwards.on('collect', r => {
+            if (page === pages.length) return;
+            page++;
+            embed.setDescription(pages[page-1]);
+            embed.setFooter(`Page ${page} of ${pages.length}`);
+            msg.edit(embed)
+        })
+        })
+    })
+    }
+}); 
 
 
 
