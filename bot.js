@@ -4008,7 +4008,7 @@ Send By : __<@${m8tr7}>__`)
         let men = eyad.mentions.users.first()
         let mas = eyad.author
         if(eyad.content.startsWith(prefix + 'appealry')) {
-            let staff = message.guild.member(message.author).roles.find('name' , '• MineCubes Sr.Mod' , '• MineCubes Admin' , '• ♛ MineCubes Owner ♛');
+            let staff = eyad.guild.member(eyad.author).roles.find('name' , '• MineCubes Sr.Mod' , '• MineCubes Admin' , '• ♛ MineCubes Owner ♛');
             if(!args) return eyad.channel.send("`Usage: " + prefix + 'appealry <@someone> <message>`');
             if(!men) return eyad.channel.send("`Usage: " + prefix + 'appealry <@someone> <message>`');
             const embed = new Discord.RichEmbed()
@@ -4018,17 +4018,18 @@ Send By : __<@${m8tr7}>__`)
              تم الرد على الابيل الخاص بك
              __${args}__
              **`)
-      .setImage("https://cdn.discordapp.com/attachments/429056808561278979/450412294078332948/download.jpg")
+             .setThumbnail(message.author.avatarURL)
             
             eyad.author.sendEmbed(embed)
                   const Embed11 = new Discord.RichEmbed()
             .setColor("RANDOM")
                     .setAuthor(eyad.guild.name, eyad.guild.iconURL)
                     .setDescription(` تم الرد على الابيل <@${eyad.author.id}>`)
-    .setImage("https://cdn.discordapp.com/attachments/429056808561278979/450412294078332948/download.jpg")
+                    .setThumbnail(message.author.avatarURL)
          eyad.channel.sendEmbed(Embed11).then(eyad => {eyad.delete(10000)})
         }
     });
+
 
 
 
