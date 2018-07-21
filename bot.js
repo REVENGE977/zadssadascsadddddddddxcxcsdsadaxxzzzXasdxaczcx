@@ -3952,4 +3952,75 @@ message.channel.awaitMessages(filte, { max: 1, time: 15000, errors: ['time'] })
 
 
 
+
+
+
+
+
+    if(message.content.startsWith(prefix +'mcappeal')) {
+          const A8tra7Room = message.guild.channels.find("name", "staff-appeals")
+
+          if(!message.channel.guild) return message.reply(`هذا الأمر فقط ل السيرفرات :x:`)
+          ;
+       let a8tra7 = message.content.split(" ").slice(1);
+       var m8tr7 = message.author.id
+    if(!message.guild.channels.find("name","staff-appeals")) return message.channel.send('appeal room or staff-appeals not found ;/')
+    var Eror = new Discord.RichEmbed()
+       .setTimestamp()
+    .setDescription(`الرجاء كتابت سبب الابيل  بعد الأمر `)
+     if(!a8tra7.join(" ")) return message.channel.send(Eror).then(message => {message.delete(50000)});
+       var ThxForSug = new Discord.RichEmbed()
+       .setTitle(`:white_check_mark: Success!`)
+       .setTimestamp()
+          .setThumbnail('https://cdn.discordapp.com/attachments/456129336634769432/463709234027298816/MarsLogov2.png')
+       .setDescription(`سيتم مراجعه الابيل من الاداره !`)
+    .addField(`سبب الابيل : `, a8tra7)
+       var Sure = new Discord.RichEmbed()
+       .setTimestamp()
+    .setDescription(`هل انت متأكد من ارسال الابيل؟ معك دقيقه قبل الالغاء`).addField(`المحتوى : `, a8tra7)
+    message.channel.sendEmbed(Sure).then(msg => {
+        msg.react('❎')
+    .then(() => msg.react('✅'))
+
+    let YesFilter = (reaction, user) => reaction.emoji.name === '✅'  && user.id === message.author.id;
+    let NoFilter = (reaction, user) => reaction.emoji.name === '❎' && user.id === message.author.id;
+
+    let Yes = msg.createReactionCollector(YesFilter, { time: 60000 });
+    let No = msg.createReactionCollector(NoFilter, { time: 60000 });
+
+    Yes.on("collect", r => {
+       var ala8tra7 = new Discord.RichEmbed()
+       .setTimestamp()
+       .setColor('#50bcdf')
+       .setThumbnail('https://cdn.discordapp.com/attachments/456129336634769432/463709234027298816/MarsLogov2.png')
+       .setFooter(`${message.author.username}#${message.author.discriminator}`)
+       .setTitle(`New Minecraft Appeal ⤵`)
+       .setURL(`https://discordapp.com/oauth2/authorize?client_id=${client.user.id}&permissions=21469585838&scope=bot`)
+       .setDescription(`
+     Appeal :
+
+Appeal Reason: ${a8tra7} \n
+Send By : __<@${m8tr7}>__`)
+
+       A8tra7Room.send(ala8tra7)
+       message.channel.sendEmbed(ThxForSug).then(message => {message.delete(2000)})
+    msg.delete();
+    })
+    No.on("collect", r => {
+    message.channel.send('تم الغاء الابيل بنجاح :white_check_mark: ').then(message => {message.delete(2000)})
+    msg.delete();
+    })
+    })
+    }
+    });
+
+
+
+
+
+
+
+
+
+
 client.login(process.env.BOT_TOKEN);
