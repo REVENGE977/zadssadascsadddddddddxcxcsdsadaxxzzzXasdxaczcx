@@ -4007,7 +4007,7 @@ Send By : __<@${m8tr7}>__`)
         let args = eyad.content.split(" ").slice(2).join(" ")
         let men = eyad.mentions.users.first()
         let mas = eyad.author
-        if(eyad.content.startsWith(prefix + 'appealry')) {
+        if(eyad.content.startsWith(prefix + 'reappeal')) {
             let staff = eyad.guild.member(eyad.author).roles.find('name' , '• MineCubes Sr.Mod' , '• MineCubes Admin' , '• ♛ MineCubes Owner ♛');
             if(!args) return eyad.channel.send("`Usage: " + prefix + 'appealry <@someone> <message>`');
             if(!men) return eyad.channel.send("`Usage: " + prefix + 'appealry <@someone> <message>`');
