@@ -3939,7 +3939,7 @@ client.on('message', message => {
           ;
        let a8tra7 = message.content.split(" ").slice(1);
        var m8tr7 = message.author.id
-    if(!message.guild.channels.find("name","staff-appeals")) return message.channel.send('appeal room or staff-appeals not found ;/')
+ if(!message.guild.channels.find("name","staff-appeals")) return message.channel.send('لايوجد روم للابيل \`staff-appeals\`')
     var Eror = new Discord.RichEmbed()
        .setTimestamp()
     .setDescription(`الرجاء كتابت سبب الابيل  بعد الأمر `)
