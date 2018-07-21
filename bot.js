@@ -4018,7 +4018,7 @@ Send By : __<@${m8tr7}>__`)
              تم الرد على الابيل الخاص بك
              __${args}__
              **`)
-             .setThumbnail(message.author.avatarURL)
+             .setThumbnail(eyad.author.avatarURL)
             
             eyad.author.sendEmbed(embed)
                   const Embed11 = new Discord.RichEmbed()
