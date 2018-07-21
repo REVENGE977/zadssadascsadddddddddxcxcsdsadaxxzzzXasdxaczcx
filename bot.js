@@ -3181,7 +3181,6 @@ client.on('message',function(message) {
 
 client.on('message', message => {
     var argresult = message.content.split(` `).slice(1).join(' ');
-      if (!devs.includes(message.author.id)) return;
   if (!message.content.startsWith(prefix)) return;
 
   let command = message.content.split(" ")[0];
@@ -3192,6 +3191,7 @@ client.on('message', message => {
 
 
 if (command == "say") {
+    if(!message.guild.member(message.author).hasPermission("Administrator")) return message.channel.send('**- You don\'t have Administrator **');
   message.channel.send(args.join("  "))
     message.delete();
   }
