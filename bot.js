@@ -3931,14 +3931,6 @@ message.channel.awaitMessages(filte, { max: 1, time: 15000, errors: ['time'] })
 });
 
 
-
-
-
-
-
-
-
-
 client.on('message', message => {
     if(message.content.startsWith(prefix +'mcappeal')) {
           const A8tra7Room = message.guild.channels.find("name", "staff-appeals")
@@ -3994,15 +3986,7 @@ Send By : __<@${m8tr7}>__`)
     })
     })
     }
-    
+    });
 
 
-
-
-
-
-
-
-
-
-client.login(process.env.BOT_TOKEN)});
+client.login(process.env.BOT_TOKEN)
