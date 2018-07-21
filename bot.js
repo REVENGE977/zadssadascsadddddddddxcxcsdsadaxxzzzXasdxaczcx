@@ -583,10 +583,9 @@ client.on("message", message => {
 :arrow_right: suggestions
 لروم اللوق اعمل شات اسمه
 :arrow_right: log
-:point_down:
+
            General Commands
 
-  『$id/ معلومات عن حسابك』
   『$suggest/ الإقتراحات』
   『$server/ معلومات عن السيرفر』
   『$avatar/ يعرض صورتك او صوره شخص』
