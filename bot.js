@@ -4047,7 +4047,7 @@ var cats = ["https://i.ytimg.com/vi/SfLV8hD7zX4/maxresdefault.jpg","http://www.d
 .setImage(cats[Math.floor(Math.random() * cats.length)])
 message.channel.sendEmbed(cat);
     }
-});
+}); 
 
 
 
