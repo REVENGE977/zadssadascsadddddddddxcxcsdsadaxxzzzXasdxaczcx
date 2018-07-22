@@ -443,7 +443,7 @@ client.on('message', msg => {
 });
 
 client.on('message', message => {
-    if (message.content.startsWith("+translate")) {
+    if (message.content.startsWith("$translate")) {
       
         const translate = require('google-translate-api');
         const Discord = require('discord.js');
@@ -453,7 +453,7 @@ client.on('message', message => {
 
     language = toTrans[toTrans.length - 2] === 'to' ? toTrans.slice(toTrans.length - 2, toTrans.length)[1].trim() : undefined;
     if (!language) {
-        return message.reply(`Please supply valid agruments.\n**Example** \`-translate [text] to [language]\``);
+        return message.reply(`Please supply valid agruments.\n**Example** \`$translate [text] to [language]\``);
     }
     let finalToTrans = toTrans.slice(toTrans.length - toTrans.length, toTrans.length - 2).join(' ');
     translate(finalToTrans, {to: language}).then(res => {
