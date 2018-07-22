@@ -35,7 +35,6 @@
     "youtube-info": "^1.2.0",
     "ytdl-core": "^0.20.4",
     "zalgolize": "^1.2.4"
-    "canvas": "^1.6.10",
   },
   "engines": {
     "node": "8.4.0"
