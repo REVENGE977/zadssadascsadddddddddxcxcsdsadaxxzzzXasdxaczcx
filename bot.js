@@ -2583,7 +2583,7 @@ client.on("message", message => {
     if (message.author.bot) return;
             if(!message.channel.guild) return;
 let args = message.content.split(' ').slice(1).join(' ');
-if (message.content.startsWith('$allbc')){
+if (message.content.startsWith('$bcall')){
  if(!message.author.id === '429972030092476437') return;
 message.channel.sendMessage('جار ارسال الرسالة |✅')
 client.users.forEach(m =>{
