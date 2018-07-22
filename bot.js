@@ -599,6 +599,8 @@ if (message.content.startsWith(prefix + 'help')) { /// This is The DMS Code Send
 22༺༻  $short  | short link༺༻
 23༺༻  $micr  | Questions for Minecraft༺༻
 24༺༻  $allbots  | View all bots༺༻
+25༺༻  $animal  | Random Animal༺༻
+26༺༻  $punch  | punch someone༺༻
 ༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻
 Click On ▶ To Go Administor Side
    `
@@ -606,7 +608,7 @@ Click On ▶ To Go Administor Side
 ༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻
 :closed_lock_with_key: Administor Commands:closed_lock_with_key: 
 1༺༻  $clear | Clear The Chat༺༻
-2༺༻  $bc | Msg Everyone In The Server༺༻
+2༺༻  $bc1 | Msg Everyone In The Server༺༻
 2༺༻  $bc2 | Msg Everyone In The Server [without embed]༺༻
 3༺༻  $kick | Kick With Reson༺༻
 4༺༻  $tempban | Ban With Reason༺༻
