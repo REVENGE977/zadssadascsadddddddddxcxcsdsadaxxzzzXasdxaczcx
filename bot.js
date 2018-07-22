@@ -4100,4 +4100,52 @@ var mentionned = message.mentions.members.first();
   
 
 
+
+ client.on('message', message => {
+    if (message.content.startsWith("$tr")) {
+
+        const translate = require('google-translate-api');
+        const Discord = require('discord.js');
+
+    let toTrans = message.content.split(' ').slice(1);
+    let language;
+
+    language = toTrans[toTrans.length - 2] === 'to' ? toTrans.slice(toTrans.length - 2, toTrans.length)[1].trim() : undefined;
+    if (!language) {
+        return message.reply(`**من فضلك قم باستخدام . \`$tr [الكلمه] to [اللغه]\`**`);
+    }
+    let finalToTrans = toTrans.slice(toTrans.length - toTrans.length, toTrans.length - 2).join(' ');
+    translate(finalToTrans, {to: language}).then(res => {
+            message.channel.send({embed: {
+                color: 3447003,
+                author: {
+                  name: 'MaxBot translate',
+                  icon_url: client.user.avatarURL
+                },
+                fields: [{
+                    name: "MaxBot",
+                    value: `**من:** ${res.from.language.iso}\n\`\`\`${finalToTrans}\`\`\`\n**الي: **${language}\n\`\`\`${res.text}\`\`\``
+                  }
+                ],
+                timestamp: new Date(),
+                footer: {
+                  icon_url: client.user.avatarURL,
+                  text: "MaxBot"
+                }
+              }
+            });
+    }).catch(err => {
+        message.channel.send({
+            embed: {
+                description: '❌  لم استطيع العثور علي اللغة المطلوبه',
+                color: 0xE8642B
+            }
+        });
+    });
+    }
+});
+  
+
+
+
 client.login(process.env.BOT_TOKEN)
