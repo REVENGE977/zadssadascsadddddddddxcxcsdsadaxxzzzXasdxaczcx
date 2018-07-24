@@ -607,7 +607,8 @@ Click On ▶ To Go Administor Side
 ,`
 ༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻
 :closed_lock_with_key: Administor Commands:closed_lock_with_key: 
-1༺༻  $clear | Clear The Chat༺༻
+1༺༻  $clear | Clear The Chat(without number)༺༻
+1༺༻  $nclear | Clear The Chat (with number)༺༻
 2༺༻  $bc1 | Msg Everyone In The Server༺༻
 2༺༻  $bc2 | Msg Everyone In The Server [without embed]༺༻
 3༺༻  $kick | Kick With Reson༺༻
@@ -622,7 +623,6 @@ Click On ▶ To Go To Bot Info
    `,`
 ༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻
 1༺༻  There is Commands Just For OrochiX | Bot By:OrochiX༺༻
-$say -> send msg with the bot 
 $bcall -> send msg for all servers
 ༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻
    `]
@@ -685,15 +685,7 @@ client.on('message', message => {
 
 
 
-             client.on('message', message => {
-                if(message.content === prefix + "الدعم الفني") {
-                    let embed = new Discord.RichEmbed ()
-                    embed.setTitle("**:arrow_right: للدخول لسيرفر الدعم الفني اضغط هنا**")
-                    .setURL("https://discord.gg/bRw2WkN");
 
-                   message.channel.sendEmbed(embed);
-                  }
-});
 
 
 
@@ -2993,41 +2985,27 @@ if (msg.author.bot) return;
          <<<<<<<< هذه اوامر الأداره للتذكير >>>>>>>>
             <--<-( Rules  Staff )->-->
 Warns :
-1- #warn mention يمنع استخدام اوامر البوت هنا , توجه الى #bot-commands
-2- #warn mention  يمنع التحدث هنا , توجه الى #public_chat
-3- #warn mention يمنع ارسال الصور هنا , توجه الى #all-media
-4- #warn mention الرجاء عدم السبام
-او استخدم داينو بوت
-?warn mention reason
-او استخدم ماكس بوت
-$warn mention reason
+1- ?warn/?w mention يمنع استخدام اوامر البوت هنا , توجه الى #bot-commands
+2- ?warn/?w mention  يمنع التحدث هنا , توجه الى #public_chat
+3- ?warn/?w mention يمنع ارسال الصور هنا , توجه الى #all-media
+4- ?warn/?w mention الرجاء عدم السبام
 ------------------------------------------------
 Mutes :
-1- #mute mention 2h  استخدام اوامر البوت في روم الاوامر فقط
-2- #mute mention 2h كتابه في روم شات العام فقط
-3- #mute mention 2h ارسال الصور في روم الصور فقط
-4- #mute mention 3h سبام
-5- #mute mention 12h تقليل احترام
-6- #mute mention 12h خطابات تحض على الكراهيه او العنصريه
-7- #mute mention 1d سب
-او استخدم داينو بوت
-?mute mention time reason
-او استخدم ماكس بوت
-$tempmute mention time reason
-$sltempmute mention
-سبيشل ميوت
+1- ?mute/?m mention 2h  استخدام اوامر البوت في روم الاوامر فقط
+2- ?mute/?m mention 2h كتابه في روم شات العام فقط
+3- ?mute/?m mention 2h ارسال الصور في روم الصور فقط
+4- ?mute/?m mention 3h سبام
+5- ?mute/?m mention 12h تقليل احترام
+6- ?mute/?m mention 12h خطابات تحض على الكراهيه او العنصريه
+7- ?mute/?m mention 1d سب
 ------------------------------------------------
 Bans :
-1- #ban mention ارسال دعوات  سيرفرات
-او استعمل داينو بوت
-?ban mention time reason
-او استخدم ماكس بوت
-$tempban mention time reason
+1- ?ban/?b mention ارسال دعوات  سيرفرات
 ------------------------------------------------
 Others :
 1- المواضيع السياسية والقبليه سيتم تحذيره ثلاث مرات قبل إجراء العقاب والسبام بعد
-#warn @mention يمنع التحدث في المواضيع السياسيه
-#warn @mention يمنع التحدث في المواضيع القبليه والعرقيه
+?warn/?w @mention يمنع التحدث في المواضيع السياسيه
+?warn/?w @mention يمنع التحدث في المواضيع القبليه والعرقيه
 ------------------------------------------------
 <--<-[ MarsMC ]->-->
             `)
