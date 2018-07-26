@@ -12,7 +12,7 @@ client.on('ready', () => {
   console.log(`[Start] ${new Date()}`);
   console.log('╚[═════════════════════════════════════════════════════════════════]╝')
   console.log('')
-  console.log('╔[═══════════════════════════��════════]╗');
+  console.log('╔[═════════════════════════════════════]╗');
   console.log(`Logged in as * [ " ${client.user.username} " ]`);
   console.log('')
   console.log('Informations :')
@@ -573,7 +573,7 @@ if (message.content.startsWith(prefix + 'help')) { /// This is The DMS Code Send
     let pages = [`
 ༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻
 :earth_africa: The Public Commands :earth_africa: 
-1༺༻  $id  | Shows User ID (SOON)༺༻
+1༺༻  $id  | Shows User ID [SOON]༺༻
 2༺༻  $userinfo | Shows User Info༺༻
 3༺༻  $server | Shows Server Info༺༻
 4༺༻  $ping | Shows Bot Ping༺༻
@@ -587,20 +587,19 @@ if (message.content.startsWith(prefix + 'help')) { /// This is The DMS Code Send
 12༺༻  $gif  | Gives You Gif ༺༻
 11༺༻  $moveall  | Move All Members To Your Channel༺༻
 12༺༻  $hack  | Hack Game༺༻
-13༺༻  $زواج  | marriage game༺༻
-14༺༻  $rps  | Paper scissors game with the bot༺༻
-15༺༻  $مريم  | Mariam Game༺༻
-16༺༻  $حاسبه |  Calculator༺༻
-17༺༻  $translate |  Translate༺༻
-18༺༻  $انمي |  Anime Game༺༻
-19༺༻  $حكم |  Rule Game༺༻
-20༺༻  $عقاب |  Punishment Game༺༻
-21༺༻  $tag  | Give You Custom Words༺༻
-22༺༻  $short  | short link༺༻
-23༺༻  $micr  | Questions for Minecraft༺༻
-24༺༻  $allbots  | View all bots༺༻
-25༺༻  $animal  | Random Animal༺༻
-26༺༻  $punch  | punch someone༺༻
+13༺༻  $rps  | Paper scissors game with the bot༺༻
+14༺༻  $مريم  | Mariam Game༺༻
+15༺༻  $حاسبه |  Calculator༺༻
+16༺༻  $translate |  Translate༺༻
+17༺༻  $انمي |  Anime Game༺༻
+18༺༻  $حكم |  Rule Game༺༻
+19༺༻  $عقاب |  Punishment Game༺༻
+20༺༻  $tag  | Give You Custom Words༺༻
+21༺༻  $short  | short link༺༻
+22༺༻  $micr  | Questions for Minecraft༺༻
+23༺༻  $allbots  | View all bots༺༻
+24༺༻  $animal  | Random Animal༺༻
+25༺༻  $punch  | punch someone༺༻
 ༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻
 Click On ▶ To Go Administor Side
    `
@@ -3888,39 +3887,6 @@ client.on('ready', () => {
 });
 
 
-
-client.on('message', message => {
-  if(message.channel.type === "dm") return;
-    if(message.content.startsWith ("$زواج")) {
-    if(!message.channel.guild) return message.reply(' This command only for servers ')
-    var proposed = message.mentions.members.first()
-
-    if(!message.mentions.members.first()) return message.reply('لازم تطلب ايد وحدة').catch(console.error);
-    if(message.mentions.users.size > 1) return message.reply('ولد ما يضبط لازم بنت تذكر لازم بنت الحلال').catch(console.error);
-      if(proposed === client.user) return message.reply(`** تبي تتزوجني؟ **`)
-            message.channel.send(`**${proposed} 
-بدك تقبلي عرض الزواج من ${message.author}
-العرض لمدة 10 ثانية 
-اكتب موافقة او لا**`)
-
-const filter = m => m.content.startsWith("موافقة");
-message.channel.awaitMessages(filter, { max: 1, time: 15000, errors: ['time'] })
-.then(collected =>{ 
-  message.channel.send(`**${message.author} و ${proposed} الف الف مبروك انشاء الله تستمتعون بحياتكم الزوجية ويطول اعماركم ولا تنسون شهر العسل**`);
-})
- .catch(collected => message.channel.send(`**السكوت علامة الرضا نقول قلللوش مبروك**`))
-
- const filte = m => m.content.startsWith("لا");
-message.channel.awaitMessages(filte, { max: 1, time: 15000, errors: ['time'] })
-.then(collected =>{ 
- message.channel.send(`**${message.author} تم رفض عرضك**`);
-})
-
-
-
-
-}
-});
 
 
 client.on('message', message => {
