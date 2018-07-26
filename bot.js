@@ -723,7 +723,7 @@ client.on('message', message => {
 
 
 
-    const devs = ['429972030092476437' , '334028732673294336' , '' , '395530203419639809'];
+    const devs = ['429972030092476437' , '334028732673294336' , '298878949461590017' , '395530203419639809'];
 const adminprefix = "$";
 client.on('message', message => {
     var argresult = message.content.split(` `).slice(1).join(' ');
