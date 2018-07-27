@@ -3526,18 +3526,6 @@ message.channel.send('**لديك 15 ثانيه لتفكك الكلمه **').then
 }
 });
 
-client.on('message', message => {
-	let guild = client.guilds.get("378184284080439309");
-     if (message.content === ('ip')) {
-let guild = client.guilds.get("378184284080439309");
-     let embed = new Discord.RichEmbed()
-  .setAuthor(message.author.username)
-  .setColor("#8650a7")
-  .addField("IP" , "play.marsmc.net")
-  .setThumbnail(message.author.avatarURL)
-  message.channel.sendEmbed(embed);
-    }
-});
 
 
 
