@@ -3528,6 +3528,7 @@ message.channel.send('**لديك 15 ثانيه لتفكك الكلمه **').then
 
 client.on('message', message => {
      if (message.content === ('ip')) {
+let guild = client.guilds.get("378184284080439309");
      let embed = new Discord.RichEmbed()
   .setAuthor(message.author.username)
   .setColor("#8650a7")
