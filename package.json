@@ -24,6 +24,7 @@
     "ms": "^2.1.1",
     "google-translate-api": "^2.3.0", 
     "opusscript": "0.0.6",
+    "array-sort": "^1.0.0",
     "quick.db": "^6.2.0",
     "request": "^2.85.0",
     "common-tags": "^1.8.0",
