@@ -9,6 +9,7 @@
   "dependencies": {
     "ascii-data-table": "^2.1.1",
     "canvas": "^1.6.10",
+    "giphy-api": "^1.2.7",
     "dateformat": "^3.0.3",
     "discord.js": "^11.3.2",
     "express": "^4.16.3",
