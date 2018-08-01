@@ -3159,6 +3159,7 @@ client.on('message',function(message) {
 
 
 client.on('message', message => {
+	if(!message.guild.member(message.author).hasPermission("Administrator")) return message.channel.send('**- You don\'t have Administrator **');
     var argresult = message.content.split(` `).slice(1).join(' ');
   if (!message.content.startsWith(prefix)) return;
 
@@ -3170,7 +3171,6 @@ client.on('message', message => {
 
 
 if (command == "say") {
-    if(!message.guild.member(message.author).hasPermission("Administrator")) return message.channel.send('**- You don\'t have Administrator **');
   message.channel.send(args.join("  "))
     message.delete();
   }
