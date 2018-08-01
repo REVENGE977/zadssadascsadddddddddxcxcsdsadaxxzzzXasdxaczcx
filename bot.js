@@ -4041,69 +4041,6 @@ var mentionned = message.mentions.members.first();
 
 
 
-client.on('ready', () => {
-    console.log(`Logged in as ${client.user.tag}!`);
-    console.log(`in ${client.guilds.size} servers `)
-    console.log(`[Users] ${client.users.size}`)
-
-
-});
-let pointts = JSON.parse(fs.readFileSync('./typePTS.json', 'utf8')); // يقوم بقراءه ملف النقاط , والمسار حق النقاط
-
-
-client.on('message', message => {
-if (!pointts[message.author.id]) pointts[message.author.id] = { // يقوم الكود تلقائياً في حال لم يجد نقاط العضو بإنشاء نقاط له ويتم إرسالها الملف المخصص
-	pointts: 0,
-  };
-if (message.content.startsWith(prefix + 'سرعة')) { // .سرعة
-	if(!message.channel.guild) return message.reply('**هذا الأمر للسيرفرات فقط**').then(m => m.delete(3000));
-
-const type = require('./type.json'); // في هذا السطر يقوم الكود بقراءة ملف الأسئلة
-const item = type[Math.floor(Math.random() * type.length)]; // الأرراي المخصص للأسئلة
-const filter = response => { // في هذا السطر يقوم بصنع فلتر للأجوبة
-    return item.answers.some(answer => answer.toLowerCase() === response.content.toLowerCase());
-};
-message.channel.send('**لديك 15 ثانية لكتابة الكلمة**').then(msg => {
-	let embed = new Discord.RichEmbed()
-	.setColor('#000000')
-	.setFooter("سرعة كتابة | لرؤية مجموع نقاطك اكتب $نقاطي |", 'https://cdn.discordapp.com/avatars/456134218330800128/d991138ecc5ab575ef7e12d2338414d7.png?size=2048')
-	.setDescription(`**قم بكتابة : ${item.type}**`) // ${item.type} = السؤال
-
-	msg.channel.sendEmbed(embed).then(() => {
-        message.channel.awaitMessages(filter, { maxMatches: 1, time: 15000, errors: ['time'] })
-        .then((collected) => {
-		message.channel.send(`${collected.first().author} ✅ **لقد قمت بكتابة الكلمة بالوقت المناسب**`);
-		console.log(`[Typing] ${collected.first().author} typed the word.`);
-            let won = collected.first().author; // في هذا السطر يقوم الكود بسحب الأي دي الذي قام بالأجابة اولاً
-            pointtts[won.id].pointts++;
-          })
-          .catch(collected => { // في حال لم يقم أحد بالإجابة
-            message.channel.send(`:x: **لم يقم أحد بكتابة الجملة بالوقت المناسب**`);
-			console.log(`[Typing] Error: No one type the word.`);
-          })
-		})
-	})
-}
-});
-if (message.content.startsWith(prefix + 'نقاطي')) {
-	if(!message.channel.guild) return message.reply('**هذا الأمر للسيرفرات فقط**').then(m => m.delete(3000));
-	let userData = pointts[message.author.id];
-	let embed = new Discord.RichEmbed()
-    .setAuthor(`${message.author.tag}`, message.author.avatarURL)
-	.setColor('#000000')
-	.setFooter("بوت سرعة الكتابة", '')
-	.setDescription(`نقاطك: \`${userData.pointts}\``)
-	message.channel.sendEmbed(embed)
-  }
-  fs.writeFile("./typePTS.json", JSON.stringify(pointts), (err) => {
-    if (err) console.error(err)
-  })
-
-client.on('guildCreate', guild => {
-	console.log(`Added to a server by: ${guild.owner.user.username} || Server name: ${guild.name} || Users: ${guild.memberCount}`); // ايفنت يقوم بإرسال إلى الكونسل بأنه قد قامت احد السيرفر بدعوة البوت
-});
-
-
 
 
 
