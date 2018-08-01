@@ -444,7 +444,7 @@ client.on('message', msg => {
 
 client.on('message', message => {
     if (message.content.startsWith("$translate")) {
-      
+
         const translate = require('google-translate-api');
         const Discord = require('discord.js');
 
@@ -572,7 +572,7 @@ client.on('message', message => {
 if (message.content.startsWith(prefix + 'help')) { /// This is The DMS Code Send The Help In DMS // Code By NotGucci
     let pages = [`
 ༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻
-:earth_africa: The Public Commands :earth_africa: 
+:earth_africa: The Public Commands :earth_africa:
 1༺༻  $id  | Shows User ID [SOON]༺༻
 2༺༻  $userinfo | Shows User Info༺༻
 3༺༻  $server | Shows Server Info༺༻
@@ -605,7 +605,7 @@ Click On ▶ To Go Administor Side
    `
 ,`
 ༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻༺▇༻
-:closed_lock_with_key: Administor Commands:closed_lock_with_key: 
+:closed_lock_with_key: Administor Commands:closed_lock_with_key:
 1༺༻  $clear | Clear The Chat(without number)༺༻
 1༺༻  $nclear | Clear The Chat (with number)༺༻
 2༺༻  $bc1 | Msg Everyone In The Server༺༻
@@ -664,7 +664,7 @@ $bcall -> send msg for all servers
         })
     })
     }
-}); 
+});
 
 client.on('message', message => {
      if (message.content === (prefix + "help")) {
@@ -1259,7 +1259,7 @@ client.on('message' , async (message) => {
 
 
 
-const minecraft = [  'ما معنى تطويرة؛ silk touch ؟',  'من هوة اللذي قد انهى سلسلة سيرفر مايت كرافت؟',  'ماهو الوحش اللذي يرسبن في معبد البحر؟',  'من افضل يوتيوبر ينزل شروحات)ردستونية؛عامة',  'ماذا يفعل لك الهيروبراين؟',  'ماهو الشئ اللذي يمكن مكاثرة الفلجر فيه؟',  'من هو اندر ثاني شئ في ماين كرافت',  'ماهو الامر اللذي يعطينا كوماند بلوك؟',  'كم من الوقت يستغرق اليوم العادي في ماين كرافت؟',  'هل لليردستون ��همية كبيرة في ماين كرافت؟',  'اندر اور',  'مطور ماين كرافت السابق',  'اصغر موب في ماين كرافت',  'كيف تصنع البوق',  'في اي ارتف��ع تلقى الدايموند',  'موب مستحيل تضربة بالبو (السهم)',  'كم نحتاج من Glowstone Dust لكي نصنع بلكة كاملة منه',  'كم نحتاج حبة ايرون لصنع سكة الحديد (Track)',  'كم عدد قلوب البقرة',  'ن ماذا يخاف الكريبر',  'يشتهر الاندرمان ب…..?',  'كم عدد قلوب الايرون قولم',  'كم ضربة تضرب الدجاجة و تموت',  'كم ��لوكة تحتاج بوابة النذر',  'كم بلوكة تحتاج بوابة الاند',  'كم تحتاج الفرن ايروون عشان تصنعها',  'كيف تصنع كرافتنق تيبل',  'كم ياخذ وقت النبات عشان يكبر',  'كم قلوب ستيفي',  'كم قلوب الاندر مان',  'هل الاندر مان يضرب',  'هل الزومبي غبي ؟ و في اي تحديث ؟',  'ماهو الافضل للتسخين الافا او فحم ؟',  'ماهو شئ الذي اقوى من الاوبسيدين ؟',]
+const minecraft = [  'ما معنى تطويرة؛ silk touch ؟',  'من هوة اللذي قد انهى سل��لة سيرفر مايت كرافت؟',  'ماهو الوحش اللذي يرسبن في معبد البحر؟',  'من افضل يوتيوبر ينزل شروحات)ردستونية؛عامة',  'ماذا يفعل لك الهيروبراين؟',  'ماهو الشئ اللذي يمكن مكاثرة الفلجر فيه؟',  'من هو اندر ثاني شئ في ماين كرافت',  'ماهو الامر اللذي يعطينا كوماند بلوك؟',  'كم من الوقت يستغرق اليوم العادي في ماين كرافت؟',  'هل لليردستون ��همية كبيرة في ماين كرافت؟',  'اندر اور',  'مطور ماين كرافت السابق',  'اصغر موب في ماين كرافت',  'كيف تصنع البوق',  'في اي ارتف��ع تلقى الدايموند',  'موب مستحيل تضربة بالبو (السهم)',  'كم نحتاج من Glowstone Dust لكي نصنع بلكة كاملة منه',  'كم نحتاج حبة ايرون لصنع سكة الحديد (Track)',  'كم عدد قلوب البقرة',  'ن ماذا يخاف الكريبر',  'يشتهر الاندرمان ب…..?',  'كم عدد قلوب الايرون قولم',  'كم ضربة تضرب الدجاجة و تموت',  'كم ��لوكة تحتاج بوابة النذر',  'كم بلوكة تحتاج بوابة الاند',  'كم تحتاج الفرن ايروون عشان تصنعها',  'كيف تصنع كرافتنق تيبل',  'كم ياخذ وقت النبات عشان يكبر',  'كم قلوب ستيفي',  'كم قلوب الاندر مان',  'هل الاندر مان يضرب',  'هل الزومبي غبي ؟ و في اي تحديث ؟',  'ماهو الافضل للتسخين الافا او فحم ؟',  'ماهو شئ الذي اقوى من الاوبسيدين ؟',]
 client.on('message', message => {
 
 
@@ -1321,15 +1321,7 @@ message.channel.send(embed)
 });
 
 
-client.on('message', message => {
-    if(message.content.includes('discord.gg')){
-                                            if(!message.channel.guild) return message.reply('** advertising me on DM ? 🤔   **');
-        if (!message.member.hasPermissions(['ADMINISTRATOR'])){
-        message.delete()
-    return message.reply(`** ممنوع نشر الروابط :angry: ! **`)
-    }
-}
-});
+
 
 
 
@@ -3158,28 +3150,7 @@ client.on('message',function(message) {
 });
 
 
-client.on('message', message => {
-	const devlo = ['429972030092476437' , '' , '' , ''];
-		var argresult = message.content.split(` `).slice(1).join(' ');
-		  if (!devlo.includes(message.author.id)) return;
-	if(!message.guild.member(message.author).hasPermission("Administrator")) return message.channel.send('**- You don\'t have Administrator **');
-    var argresult = message.content.split(` `).slice(1).join(' ');
-  if (!message.content.startsWith(prefix)) return;
 
-  let command = message.content.split(" ")[0];
-  command = command.slice(prefix.length);
-
-  let args = message.content.split(" ").slice(1);
-
-
-
-if (command == "say") {
-  message.channel.send(args.join("  "))
-    message.delete();
-  }
-
-
-});
 
 
 
@@ -3342,6 +3313,47 @@ client.on('guildCreate', guild => {
         guild.owner.send(star)
   })
 
+
+
+const weather = require('weather-js');//npm install weather-js
+client.on('message', message => {
+    let msg = message.content.toUpperCase();
+    let cont = message.content.slice(prefix.length).split(" ");
+    let args = cont.slice(1);
+    if (msg.startsWith(prefix + 'weather')) {
+
+        weather.find({search: args.join(" "), degreeType: 'F'}, function(err, result) {
+            if (err) message.channel.send(err);
+
+
+            if (result.length === 0) {
+                message.channel.send('**اكتب المنطقه**').
+                return;
+            }
+
+
+            var current = result[0].current;
+            var location = result[0].location;
+
+
+            const embed = new Discord.RichEmbed()
+.setDescription(`**${current.skytext}**`)
+                .setAuthor(`Weather for ${current.observationpoint}`)
+                .setThumbnail(current.imageUrl)
+                .setColor(0x00AE86)
+                .addField('Timezone',`UTC${location.timezone}`, true)
+                .addField('Degree Type',location.degreetype, true)
+                .addField('Temperature',`${current.temperature} Degrees`, true)
+                .addField('Feels Like', `${current.feelslike} Degrees`, true)
+                .addField('Winds',current.winddisplay, true)
+                .addField('Humidity', `${current.humidity}%`, true)
+
+
+                message.channel.send({embed});
+        });
+    }
+
+});
 
 
 
@@ -3803,11 +3815,11 @@ function search_video(query, cb) {
 function isYoutube(str) {
     return str.toLowerCase().indexOf('youtube.com') > -1;
 }
- 
+
 	client.on('message', message => {
     if (message.content.startsWith("habout")) {
       message.channel.send({
- embed: new Discord.RichEmbed() 
+ embed: new Discord.RichEmbed()
     .setColor('RED')
     .addField('**الذاكرة المستخدمة 💾**', `${(process.memoryUsage().rss / 1000000).toFixed()}MB`, true)
          .addField('**سرعة الاتصال📡**' , `${Date.now() - message.createdTimestamp}` + ' ms')
@@ -3930,7 +3942,7 @@ client.on('message',  (message) => {
   }).catch(e => {
     client.log.error(e);
   })
-        }  
+        }
 });
 
 
@@ -3945,13 +3957,13 @@ var cats = ["https://i.ytimg.com/vi/SfLV8hD7zX4/maxresdefault.jpg","http://www.d
 .setImage(cats[Math.floor(Math.random() * cats.length)])
 message.channel.sendEmbed(cat);
     }
-}); 
+});
 
 
 
 
   client.on('message', message => {
-          
+
 
            if (message.content.startsWith(prefix + "user")) {
                      if(!message.channel.guild) return message.reply(`هذا الأمر فقط ل السيرفرات ❌`);
@@ -3979,33 +3991,53 @@ var mentionned = message.mentions.members.first();
  }
         moment.locale('ar-TN');
       var id = new  Discord.RichEmbed()
-       
+
     .setColor("#0a0909")
  .setThumbnail(message.author.avatarURL)
-.addField(': تاريخ دخولك للديسكورد',` \`${moment(heg.createdTimestamp).format('YYYY/M/D HH:mm:ss')} \`**\n ${moment(heg.createdTimestamp).fromNow()}**` ,true) 
+.addField(': تاريخ دخولك للديسكورد',` \`${moment(heg.createdTimestamp).format('YYYY/M/D HH:mm:ss')} \`**\n ${moment(heg.createdTimestamp).fromNow()}**` ,true)
 .addField(': تاريخ دخولك لسيرفرنا', `\`${moment(h.joinedAt).format('YYYY/M/D HH:mm:ss')}  \` **\n ${moment(h.joinedAt).fromNow()} **`, true)
 
-.setFooter(message.author.username,'https://images-ext-2.discordapp.net/external/JpyzxW2wMRG2874gSTdNTpC_q9AHl8x8V4SMmtRtlVk/https/orcid.org/sites/default/files/files/ID_symbol_B-W_128x128.gif')  
+.setFooter(message.author.username,'https://images-ext-2.discordapp.net/external/JpyzxW2wMRG2874gSTdNTpC_q9AHl8x8V4SMmtRtlVk/https/orcid.org/sites/default/files/files/ID_symbol_B-W_128x128.gif')
     message.channel.sendEmbed(id);
 })
 }
-    
 
-         
+
+
      });
-  
+
+
+client.on('message', message => {
+  if (message.author.bot) return;
+  if (!message.content.startsWith(prefix)) return;
+
+  let command = message.content.split(" ")[0];
+  command = command.slice(prefix.length);
+
+  let args = message.content.split(" ").slice(1);
+
+
+
+if (command == "say") {
+let rank = message.guild.member(message.author).roles.find('name', 'say');
+if (!rank) return message.reply('انت لا تمتلك الرتبه المخصصه لهذا الامر')
+  message.channel.send(args.join("  "))
+    message.delete();
+  }
+
+
+});
+
+
+  client.on('ready' , function (){
+var time = 7200000;
+client.setInterval(function() {
+    client.destroy();
+        child_process.fork(__dirname + "/max.js");
+  }, time);
+});
 
 
 
 
-
-
-
-
-
-
-  
-
-
-
-client.login(process.env.BOT_TOKEN)
+client.login("NDU2MTM0MjE4MzMwODAwMTI4.DkN_Bg.TI59-7HqgcbOiTEYLlP04dYq_rA")
