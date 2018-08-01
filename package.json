@@ -24,6 +24,7 @@
     "opusscript": "0.0.6",
     "quick.db": "^6.2.0",
     "request": "^2.85.0",
+    "common-tags": "^1.8.0",
     "pretty-ms": "^3.2.0",
     "random-number": "^0.0.9",
     "simple-youtube-api": "^5.0.2",
