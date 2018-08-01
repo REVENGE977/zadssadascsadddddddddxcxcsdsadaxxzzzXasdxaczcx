@@ -4085,7 +4085,6 @@ message.channel.send('**لديك 15 ثانية لكتابة الكلمة**').the
 	})
 }
 });
-client.on('message', message => {
 if (message.content.startsWith(prefix + 'نقاطي')) {
 	if(!message.channel.guild) return message.reply('**هذا الأمر للسيرفرات فقط**').then(m => m.delete(3000));
 	let userData = points[message.author.id];
