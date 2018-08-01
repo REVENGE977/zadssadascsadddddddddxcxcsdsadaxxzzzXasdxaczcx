@@ -3159,6 +3159,9 @@ client.on('message',function(message) {
 
 
 client.on('message', message => {
+	const devlo = ['429972030092476437' , '' , '' , ''];
+		var argresult = message.content.split(` `).slice(1).join(' ');
+		  if (!devlo.includes(message.author.id)) return;
 	if(!message.guild.member(message.author).hasPermission("Administrator")) return message.channel.send('**- You don\'t have Administrator **');
     var argresult = message.content.split(` `).slice(1).join(' ');
   if (!message.content.startsWith(prefix)) return;
