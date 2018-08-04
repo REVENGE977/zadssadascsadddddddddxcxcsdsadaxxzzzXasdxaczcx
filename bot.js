@@ -3184,59 +3184,7 @@ if (message.content.startsWith("$kick")) {
 };
 });
 
-const child_process = require("child_process");
 
-client.on('message', message => {
-if(message.content === adminprefix + "restart") {
-      if (!devs.includes(message.author.id)) return;
-          message.channel.send(`⚠️ **الشخص الذي اعاد تشغيل البوت ${message.author.username}**`);
-        console.log(`⚠️ جاري اعادة تشغيل البوت... ⚠️`);
-        client.destroy();
-        child_process.fork(__dirname + "/max.js");
-        console.log(`تم اعادة تشغيل البوت الاساس`);
-    }
-
-  }); // By Shadow__X
-
-
-
-
-client.on('message', message => {
-if(message.content === adminprefix + "restart1") {
-      if (!devs.includes(message.author.id)) return;
-          message.channel.send(`⚠️ **الشخص الذي اعاد تشغيل البوت ${message.author.username}**`);
-        console.log(`⚠️ جاري اعادة تشغيل البوت... ⚠️`);
-        client.destroy();
-        child_process.fork(__dirname + "/bot.js");
-        console.log(`تم اعاده تشغيل كود الموسيقى`);
-    }
-
-  }); // By Shadow__X
-
-
-client.on('message', message => {
-if(message.content === adminprefix + "restart2") {
-      if (!devs.includes(message.author.id)) return;
-          message.channel.send(`⚠️ **الشخص الذي اعاد تشغيل البوت ${message.author.username}**`);
-        console.log(`⚠️ جاري اعادة تشغيل البوت... ⚠️`);
-        client.destroy();
-        child_process.fork(__dirname + "/anime.js");
-        console.log(`تم اعاده تشغيل لعبه الانمي`);
-    }
-
-  }); // By Shadow__X
-
-  client.on('message', message => {
-if(message.content === adminprefix + "restart3") {
-      if (!devs.includes(message.author.id)) return;
-          message.channel.send(`⚠️ **الشخص الذي اعاد تشغيل البوت ${message.author.username}**`);
-        console.log(`⚠️ جاري اعادة تشغيل البوت... ⚠️`);
-        client.destroy();
-        child_process.fork(__dirname + "/log.js");
-        console.log(`تم اعادة تشغيل اللوق`);
-    }
-
-  }); // By Shadow__X
 
 
 
@@ -3969,13 +3917,6 @@ if (!rank) return message.reply('انت لا تمتلك الرتبه المخص�
 });
 
 
-  client.on('ready' , function (){
-var time = 7200000;
-client.setInterval(function() {
-    client.destroy();
-        child_process.fork(__dirname + "/max.js");
-  }, time);
-});
 
 
 
