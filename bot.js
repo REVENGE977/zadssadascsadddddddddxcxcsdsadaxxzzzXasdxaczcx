@@ -3921,4 +3921,5 @@ if (!rank) return message.reply('انت لا تمتلك الرتبه المخص�
 
 
 
-client.login("NDU2MTM0MjE4MzMwODAwMTI4.DkN_Bg.TI59-7HqgcbOiTEYLlP04dYq_rA")
+client.login(process.env.BOT_TOKEN)
+
