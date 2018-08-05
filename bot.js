@@ -3919,7 +3919,8 @@ if (!rank) return message.reply('انت لا تمتلك الرتبه المخص�
 
 client.on('message', message => {
 client.on('voiceStateUpdate', (old, now) => {
-    const channel = client.channels.get('472417985047560193')
+    const channel = client.channels.get('475730153201336320')
+    const allplayer = message.guild.memberCount
     const size = channel.name.match(/\[\s(\d+)\s\]/);
     if (!size) return channel.setName(`Users: [ ${message.guild.memberCount} ]`);
     if (allplayer !== size) channel.setName(`Users: [ ${message.guild.memberCount} ]`);
