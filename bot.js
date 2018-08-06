@@ -1325,27 +1325,6 @@ message.channel.send(embed)
 
 
 
-client.on("message", async message => {
-           let args = message.content.split(' ').slice(1);
-    if(message.content.startsWith(prefix + 'giveaway')) {
-    if(!message.channel.guild) return message.channel.send('**هذا الأمر فقط للسيرفرات**').then(m => m.delete(5000));
-    if (message.author.id !== message.guild.owner.id) {
-    message.channel.send('**هادا الامر لصاحب السيرفر فقط**' );
-      return;
-    }
-    const array = [];
-    message.guild.members.forEach((member) => {
-      array.push(member.user.tag);
-    });
-    const rand = array[Math.floor(Math.random() * array.length)];
-    message.channel.send(rand).then((m) => {
-      m.split('#');
-      m.edit(array);
-    });
-
-    };
-});
-
 
 
 client.on('message', ra3d => {
@@ -1420,118 +1399,13 @@ if(message.content.startsWith(prefix+"userinfo")) {
 
 
 console.log ("CONNECTING...");
-
-var gEnteredUsers = [];
-var gDeclareArray = [];
-var gTime;
-var gPrize;
-var msgID;
-var fetchedMsg;
-var fUserId;
-var Active_Giveaway = "false";
-var entryCount = 0;
-var gWinner = "no one";
+console.log ("CONNECTING.....");
+console.log ("CONNECTING......");
+console.log ("CONNECTING.......");
+console.log ("CONNECTED !");
 
 
-    //bot.user.setActivity("Icky (Steam)");
 
-client.on('message', (message) => {
-
-      if ( (message.content.startsWith ('$gstart')) &&  (message.member.roles.find("name", "Giveaways") ))
-      {
-        Active_Giveaway = "true";
-        gDeclareArray.push(message.content);
-        gDeclareArray = message.content.split(" ");
-        gDeclareArray.shift();
-        gTime = gDeclareArray[0];
-        gDeclareArray.shift();
-        gPrize = gDeclareArray.toString();
-        gPrize = gPrize.replace(/,/g, " ");
-        console.log(gPrize);
-
-        message = message.channel.send
-        ( fetchedMsg = new Discord.RichEmbed()
-
-            //.setThumbnail("https://i.imgur.com/ii17NzC.png")
-            .setColor([151, 105, 181])
-            .setTitle("𝘞𝘪𝘯𝘯𝘦𝘳 𝘨𝘦𝘵𝘴: "+gPrize)
-            .setDescription(gTime + " Seconds")
-            .setFooter("Type $genter to enter the giveaway")
-
-        ).then(message =>
-            {
-                msgID = message.id;
-                //message.react("✅");
-
-                var gUpdateCountInt = setInterval(function()
-                {
-
-                    gTime = gTime - 1;
-                    if (gTime < 1)
-                    {
-                        gWinner = gEnteredUsers[Math.floor(Math.random()*gEnteredUsers.length)];
-                        Active_Giveaway = "false";
-                        gEnteredUsers = [];
-                        clearInterval(gUpdateCountInt);
-                        clearInterval(gCountInt);
-
-                        message.edit
-                    (
-                        fetchedMsg
-                        .setTitle("𝘞𝘪𝘯𝘯𝘦𝘳 𝘨𝘦𝘵𝘴: "+gPrize)
-                        .setDescription("")
-                        .addField("Winner:",gWinner)
-                        .setFooter("")
-                        .setTimestamp()
-                        .setColor([0, 0, 0])
-                    )
-
-                    message.channel.send
-                        ( winnerMsg = new Discord.RichEmbed()
-
-                            .setThumbnail("https://i.imgur.com/RAAflnr.png")
-                            .setColor([90, 155, 91])
-                            .setTitle("Congratulations!")
-                            .setDescription(gWinner+" has won "+gPrize+"!")
-                            .setTimestamp()
-                        )
-
-                        gWinner = "no one";
-
-                    }
-
-                }, 1000);
-
-                var gCountInt = setInterval(function()
-                {
-                    message.edit
-                    (
-                        fetchedMsg
-                        .setTitle("𝘞𝘪𝘯𝘯𝘦𝘳 𝘨𝘦𝘵𝘴: "+gPrize)
-                        .setDescription(gTime + " Seconds\n" + "Entries: "+ entryCount)
-                    )
-
-                }, 5000);
-
-            } );
-
-      }
-
-      if ((message.content == '$genter') && (Active_Giveaway == "true") )
-      {
-        fUserId = message.author.id;
-        var i;
-        for (i = 0; i < gEnteredUsers.length; i++) {
-            if (gEnteredUsers[i] == "<@"+fUserId+">") {
-                return false;
-            }
-        }
-        console.log(message.author.id);
-        fUserId = message.author.id;
-        gEnteredUsers.push("<@"+fUserId+">");
-        entryCount = gEnteredUsers.length;
-        message.delete(1);
-      }})
 
 
 
@@ -1727,16 +1601,14 @@ client.on('message', message => {
         })
         r.then(s=> {
 
-            points[message.author.id].points +=1
                     message.reply(`**✅  كفوو والله يا شنب اجابتك صحيحه**`);
                message.channel.sendEmbed(embed)
         })
         })
     }
-    fs.writeFile('points.json', JSON.stringify(points), (err) => {
         if (err) console.error(err);
     })
-})
+
 
 
 
@@ -2250,10 +2122,10 @@ guild.channels.find('id', '469540555886559262').setName(" Mars Online「"+rebel+
 guild.channels.find('id', '469540555886559262').setName(" Mars Online「"+rebel+"」");
 }
 });
-client.on('message', Codes => {
+client.on('message', Shadw => {
 
-  if(Codes.content === "$صوت") {
-      Codes.channel.send(" Voice「"+rebel+"」");
+  if(Shadw.content === "$صوت") {
+      Shadw.channel.send(" Voice「"+rebel+"」");
 }
 });
 
@@ -2982,7 +2854,7 @@ message.channel.send(`${user} has ${inviteCount} invites.`);
 });
 
 
-const codes = {
+const Shadw = {
     ' ': '   ',
     '0': '0⃣',
     '1': '1⃣',
@@ -3001,7 +2873,7 @@ const codes = {
   };
 
   'abcdefghijklmnopqrstuvwxyz'.split('').forEach(c => {
-    codes[c] = codes[c.toUpperCase()] = ` :regional_indicator_${c}:`;
+    Shadw[c] = Shadw[c.toUpperCase()] = ` :regional_indicator_${c}:`;
   });
 
 
@@ -3015,7 +2887,7 @@ const codes = {
   message.channel.send(
       args.join(' ')
           .split('')
-          .map(c => codes[c] || c)
+          .map(c => Shadw[c] || c)
           .join('')
   );
   };
@@ -3838,6 +3710,58 @@ client.on('voiceStateUpdate', (old, now) => {
 
 })
 
+
+client.on('message',async message => {
+var Shadw = "$";
+var args = message.content.split(" ").slice(1);
+var title = args[1]
+          if(message.content.startsWith(Shadw + "giveaway")) {
+              if(!message.guild.member(message.author).hasPermission('MANAGE_GUILD')) return message.channel.send(':heavy_multiplication_x:| **s You Dont Have Premission**');
+              if(!args) return message.channel.send(`**Use : $start  <Time> <Presentse>**`);
+              if(!title) return message.channel.send(`**Use : **\`$start ${args[0]} Minutes\`** <Presentse>**`);
+         if(!isNaN(args)) return message.channel.send(':heavy_multiplication_x:| **The Time Be Nambers `` Do the Commend Agin``**');
+                           let giveEmbed = new Discord.RichEmbed()
+                  .setAuthor(message.guild.name, message.guild.iconURL)
+                  .setDescription(`**${title}** \nReact Whit 🎉 To Enter! \n**Time remaining: Minutes :${duration / 60000}**`)
+                  .setFooter(message.author.username, message.author.avatarURL);
+
+                  message.channel.send(' :heavy_check_mark: **Giveaway Created** :heavy_check_mark:' , {embed: giveEmbed}).then(m => {
+                      message.delete();
+                      m.react('🎉');
+                     setTimeout(() => {
+                       let users = m.reactions.get("🎉").users;
+                       let list = users.array().filter(u => u.id !== client.user.id);
+                       let gFilter = list[Math.floor(Math.random() * list.length) + 0]
+                       let endEmbed = new Discord.RichEmbed()
+                       .setAuthor(message.author.username, message.author.avatarURL)
+                       .setTitle(title)
+                       .addField('Giveaway End !🎉',`Winners : ${gFilter}`)
+                     m.edit('** 🎉 GIVEAWAY ENDED 🎉**' , {embed: endEmbed});
+                     },args * 60000);
+                   });
+          }
+});
+
+
+// Code By : Shadw
+// Edited By : ShadowX
+client.on('message',async Shadw => {
+  var Shadw = "$";
+  if(Shadw.content.startsWith(Shadw + "vonlinecreate")) {
+  if(!Shadw.guild.member(Shadw.author).hasPermissions('MANAGE_CHANNELS')) return Shadw.reply(':x: **ليس لديك الصلاحيات الكافية**');
+  if(!Shadw.guild.member(client.user).hasPermissions(['MANAGE_CHANNELS','MANAGE_ROLES_OR_PERMISSIONS'])) return Shadw.reply(':x: **ليس معي الصلاحيات الكافية**');
+  Shadw.guild.createChannel(`Voice Online : [ ${Shadw.guild.members.filter(m => m.voiceChannel).size} ]` , 'voice').then(c => {
+    console.log(`Voice Online Is Activation In ${Shadw.guild.name}`);
+    c.overwritePermissions(Shadw.guild.id, {
+      CONNECT: false,
+      SPEAK: false
+    });
+    setInterval(() => {
+      c.setName(` Online :  ${Shadw.guild.members.filter(m => m.voiceChannel).size} .`)
+    },1000);
+  });
+  }
+});
 
 
 client.login(process.env.BOT_TOKEN)
