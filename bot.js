@@ -517,6 +517,8 @@ var Eror = new Discord.RichEmbed()
    .setTitle(`:white_check_mark: Success!`)
    .setTimestamp()
 
+   
+   msg.delete();
 
 
    var ala8tra7 = new Discord.RichEmbed()
@@ -529,11 +531,10 @@ var Eror = new Discord.RichEmbed()
    .setDescription(`|~~>~~ ${a8tra7} ~~<~~|\n    المقترح : __<@${m8tr7}>__`)
    A8tra7Room.send(ala8tra7)
    message.channel.sendEmbed(ThxForSug).then(message => {message.delete(2000)})
-msg.delete();
+
 }
-No.on("collect", r => {
-message.channel.send('تم الغاء اقتراح بنجاح :white_check_mark: ').then(message => {message.delete(2000)})
-msg.delete();
+
+
 })
 
 
@@ -3743,7 +3744,6 @@ client.on('message',async Shadw => {
   }
 });
 
- })
 
 client.login(process.env.BOT_TOKEN)
 
