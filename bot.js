@@ -518,7 +518,7 @@ var Eror = new Discord.RichEmbed()
    .setTimestamp()
 
    
-   msg.delete();
+   message.delete();
 
 
    var ala8tra7 = new Discord.RichEmbed()
