@@ -516,24 +516,9 @@ var Eror = new Discord.RichEmbed()
    var ThxForSug = new Discord.RichEmbed()
    .setTitle(`:white_check_mark: Success!`)
    .setTimestamp()
-      .setThumbnail('https://cdn.discordapp.com/icons/378184284080439309/17bef133ab9aed50a4931303bdf74688.jpg')
-   .setDescription(`شكراً على اقتراحك !`)
-.addField(`إقتراحك : `, a8tra7)
-   var Sure = new Discord.RichEmbed()
-   .setTimestamp()
-   .setDescription(`هل انت متأكد من ارسال الاقتراح؟ معك دقيقه قبل الالغاء`)
-.addField(`المحتوى : `, a8tra7)
-message.channel.sendEmbed(Sure).then(msg => {
-    msg.react('❎')
-.then(() => msg.react('✅'))
 
-let YesFilter = (reaction, user) => reaction.emoji.name === '✅'  && user.id === message.author.id;
-let NoFilter = (reaction, user) => reaction.emoji.name === '❎' && user.id === message.author.id;
 
-let Yes = msg.createReactionCollector(YesFilter, { time: 60000 });
-let No = msg.createReactionCollector(NoFilter, { time: 60000 });
 
-Yes.on("collect", r => {
    var ala8tra7 = new Discord.RichEmbed()
    .setTimestamp()
    .setColor('#50bcdf')
@@ -545,14 +530,12 @@ Yes.on("collect", r => {
    A8tra7Room.send(ala8tra7)
    message.channel.sendEmbed(ThxForSug).then(message => {message.delete(2000)})
 msg.delete();
-})
+}
 No.on("collect", r => {
 message.channel.send('تم الغاء اقتراح بنجاح :white_check_mark: ').then(message => {message.delete(2000)})
 msg.delete();
 })
-})
-}
-});
+
 
 
 
@@ -3760,6 +3743,7 @@ client.on('message',async Shadw => {
   }
 });
 
+ })
 
 client.login(process.env.BOT_TOKEN)
 
