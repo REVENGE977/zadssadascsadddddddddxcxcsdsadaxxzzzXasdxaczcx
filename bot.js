@@ -3684,8 +3684,8 @@ client.on('voiceStateUpdate', (old, now) => {
     const channel = client.channels.get('475730153201336320')
     const any = message.guild.memberCount
     const size = channel.name.match(/\[\s(\d+)\s\]/);
-    if (!size) return channel.setName(`Mars Users: [ ${message.guild.memberCount} ]`);
-    if (any !== size) channel.setName(`Mars Users: 「 ${message.guild.memberCount} 」`);
+    if (!size) return channel.setName(`Mars Members: 「 ${message.guild.memberCount} 」`);
+    if (any !== size) channel.setName(`Mars Members: 「 ${message.guild.memberCount} 」`);
 
   });
 
